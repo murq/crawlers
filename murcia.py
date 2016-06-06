@@ -28,8 +28,8 @@ def connect():
     }
 
     r = requests.post(url, data=data_string, headers=headers)
-
-    print(r.text)
+    r = r.text[3:]
+    print(r.json())
 
 
 connect()
